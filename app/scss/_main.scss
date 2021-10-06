@@ -1,0 +1,283 @@
+.track-down {
+   font-family: "Source Sans Pro";
+   position: relative;
+   // background: #e9e9e9;
+   overflow: hidden;
+
+   &__content {
+      position: relative;
+      z-index: 10;
+      min-height: 620px;
+      padding-top: 100px;
+   }
+
+   &__title {
+      cursor: default;
+      font-weight: bold;
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 50px;
+   }
+
+   &__subtitle {
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 15px;
+      cursor: default;
+   }
+
+   &__container {
+      @include adaptiv("padding-left", 200, 0, 2, 1200, 800);
+      // padding-left: 200px;
+   }
+
+   &__bg-top-left {
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: -100px;
+   }
+
+   &__bg-bottom-left {
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+   }
+
+   &__bg-bottom-right {
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      bottom: 0;
+   }
+}
+
+.policy-num {
+   display: flex;
+   margin-bottom: 25px;
+
+   .input {
+      color: #0b1f35;
+   }
+
+   &.success {
+
+      .policy-num__message-basic,
+      .policy-num__message-wrong {
+         display: none;
+      }
+
+      .policy-num__message-success {
+         display: block;
+      }
+
+      .input {
+         color: #04ba00;
+      }
+
+      .policy-num__btns-primary {
+         display: none;
+      }
+
+      .policy-num__btns-secondary {
+         display: flex;
+      }
+   }
+
+   &.wrong {
+
+      .policy-num__message-basic,
+      .policy-num__message-success {
+         display: none;
+      }
+
+      .policy-num__message-wrong {
+         display: block;
+      }
+
+      .input {
+         color: #ff0021;
+      }
+   }
+
+   &__input-block {
+      margin-right: 30px;
+      max-width: 570px;
+      width: 100%;
+   }
+
+   &__btns-primary {}
+
+   &__btn {
+      &:not(:last-child) {
+         margin-right: 10px;
+      }
+   }
+
+   &__btn-track {}
+
+   &__btns-secondary {
+      display: flex;
+      display: none;
+   }
+
+   &__btn-details {}
+
+   &__btn-search {}
+
+   &__message {
+      width: 100%;
+      font-size: 18px;
+      color: #000000;
+      cursor: default;
+      // display: none;
+   }
+
+   &__message-basic {}
+
+   &__message-success {
+      display: none;
+      color: #04ba00;
+   }
+
+   &__message-wrong {
+      display: none;
+      color: #ff0021;
+   }
+}
+
+.input {
+   width: 100%;
+   height: 54px;
+   border: 1px solid #15499f;
+   padding: 14px 60px 15px 30px;
+   border-radius: 10px;
+   font-weight: bold;
+   font-size: 20px;
+   background: #fff;
+
+   &::placeholder {
+      color: #c6c6c6;
+   }
+
+   &:focus {
+      box-shadow: 1px 1px 4px #15499f;
+   }
+
+   &__box {
+      margin-bottom: 15px;
+      position: relative;
+      width: 100%;
+   }
+
+   &__search-icon {
+      height: 50px;
+      width: 52px;
+      border-radius: 10px;
+      background: #fff;
+      position: absolute;
+      transform: translateY(-50%);
+      right: 1px;
+      top: 50%;
+      @extend %itemCenter;
+      display: none;
+   }
+
+   &__info {
+      font-size: 18px;
+      cursor: default;
+      margin-bottom: 5px;
+   }
+}
+
+.detailed-info {
+   display: none;
+   padding-bottom: 100px;
+   &.open{
+      display: block;
+   }
+   &__container {
+      display: flex;
+      align-items: flex-end;
+   }
+
+   &__input-block {
+      max-width: 300px;
+      margin-right: 35px;
+
+      .input__box {
+         margin-bottom: unset;
+      }
+
+      .input {
+         padding-right: 15px;
+      }
+   }
+
+   &__btn {}
+}
+
+.polis-info {
+   display: none;
+   &.open{
+      display: flex;
+   }
+   padding-bottom: 150px;
+
+   &__table {
+      max-width: 460px;
+      margin-right: 40px;
+   }
+
+   &__table-title {
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 20px;
+   }
+
+   &__table-column {
+      border-bottom: 1px solid #15499f;
+      margin-bottom: 10px;
+
+      &:last-child {
+         border-bottom: none;
+      }
+   }
+
+   &__table-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+   }
+
+   &__table-item-name {
+      font-weight: 600;
+   }
+
+   &__table-item {
+      // font-size: 20px;
+   }
+
+   &__table-subtitle {
+      font-weight: 600;
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      cursor: default;
+   }
+
+   &__download {}
+
+   &__download-title {
+      font-weight: 600;
+      margin-bottom: 10px;
+      cursor: default;
+   }
+
+   &__btn-download {}
+}

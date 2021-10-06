@@ -1,0 +1,299 @@
+// MAX-WIDTH 1600PX breakpoints START
+@media (max-width: 1600px) {
+}
+// MAX-WIDTH 1600PX breakpoints END
+
+// MAX-WIDTH 1399.98PX breakpoints START
+@media (max-width: 1399.98px) {
+}
+// MAX-WIDTH 1399.98PX breakpoints END
+
+// MAX-WIDTH 1199.98PX breakpoints START
+@media (max-width: 1199.98px) {
+   .track-down__bg-bottom-left {
+      display: none;
+   }
+}
+// MAX-WIDTH 1199.98PX breakpoints END
+@media (max-width: 1099.98px) {
+   .header__buttons {
+      margin-left: 15px;
+   }
+   .logo {
+      margin-right: 15px;
+   }
+}
+
+@media (max-width: 1023.98px) {
+   .track-down__title {
+      margin-bottom: 20px;
+   }
+   .policy-num__btn:not(:last-child) {
+      margin-right: unset;
+   }
+   .track-down__title {
+      text-align: left;
+      @include adaptiv("padding-left", 200, 0, 2, 1200, 800);
+   }
+   .policy-num__btn-track,
+   .policy-num__btn-search {
+      display: none;
+   }
+   .input__search-icon {
+      display: flex;
+   }
+   .menu {
+      display: none;
+   }
+   .header__buttons {
+      margin-left: auto;
+   }
+   .burger-icon {
+      display: block;
+   }
+}
+// MAX-WIDTH 991.98PX breakpoints START
+@media (max-width: 991.98px) {
+   .footer {
+      &__container {
+         justify-content: space-between;
+      }
+      &__contacts-block {
+         flex-direction: column;
+         align-items: flex-end;
+         flex: 0 1 auto;
+      }
+      &__contacts {
+         justify-content: flex-end;
+         flex-wrap: wrap;
+         margin: 0 0 20px 0;
+      }
+      &__phone-num {
+         margin-right: unset;
+         margin-bottom: 15px;
+      }
+      &__email {
+         margin-left: 13px;
+         margin-bottom: 15px;
+      }
+   }
+}
+// MAX-WIDTH 991.98PX breakpoints END
+
+// MAX-WIDTH 767.98PX breakpoints START
+@media (max-width: 767.98px) {
+   .polis-info {
+      // flex-direction: column;
+      flex-wrap: wrap;
+      &__table {
+         margin-bottom: 20px;
+      }
+   }
+   .policy-num {
+      flex-direction: column;
+      &__input-block {
+         margin-bottom: 20px;
+      }
+      &__btns-secondary {
+         align-self: center;
+      }
+   }
+   .footer {
+      &__container {
+         margin-bottom: 30px;
+      }
+   }
+}
+// MAX-WIDTH 767.98PX breakpoints END
+
+// MAX-WIDTH 576.98PX breakpoints START
+@media (max-width: 575.98px) {
+   .polis-info {
+      padding-bottom: 100px;
+      &__table {
+         margin-right: unset;
+         max-width: unset;
+         width: 100%;
+      }
+      &__table-title {
+         font-size: 18px;
+      }
+      &__table-item {
+         font-size: 14px;
+         margin-bottom: 7px;
+      }
+      &__table-column {
+         margin-bottom: 15px;
+         &:last-child {
+            border-bottom: 1px solid #15499f;
+         }
+      }
+      &__table-subtitle {
+         margin-bottom: 15px;
+         font-size: 16px;
+      }
+      &__download-title {
+         font-size: 18px;
+         margin-bottom: 5px;
+      }
+      &__btn-download svg {
+         width: 24.15px;
+         height: 32px;
+      }
+   }
+   .popup-sms {
+      &__title {
+         font-size: 18px;
+         color: #15499f;
+      }
+      &__subtitle {
+         font-size: 18px;
+         color: #15499f;
+      }
+      &__input {
+         margin-bottom: 20px;
+      }
+      &__text {
+         padding: 0 10px;
+      }
+      &__btn {
+         margin-top: 25px;
+      }
+   }
+   .popup {
+      &__content {
+         margin: 25px;
+         padding: 25px 20px;
+      }
+      .popup-close {
+         top: 15px;
+         right: 12px;
+      }
+   }
+   .detailed-info {
+      &__container {
+         flex-direction: column;
+         align-items: start;
+      }
+      &__input-block {
+         max-width: unset;
+         width: 100%;
+         margin-bottom: 20px;
+      }
+      &__btn {
+         align-self: center;
+      }
+   }
+   .input {
+      font-size: 16px;
+      padding-left: 15px;
+      &__info {
+         font-size: 14px;
+      }
+      &__box {
+         margin-bottom: 10px;
+      }
+   }
+   .track-down {
+      &__bg-top-left {
+         display: none;
+      }
+      &__content {
+         padding-top: 40px;
+         min-height: 450px;
+      }
+      &__title {
+         font-size: 25px;
+      }
+      &__subtitle {
+         font-size: 18px;
+         margin-bottom: 20px;
+      }
+   }
+   .policy-num {
+      margin-bottom: 35px;
+      &__message {
+         font-size: 14px;
+      }
+   }
+   .footer {
+      &__container {
+         margin-bottom: 35px;
+      }
+      &__company-block {
+         margin-right: 10px;
+      }
+      &__contacts-block {
+         align-items: start;
+      }
+      &__contacts {
+         flex-direction: column;
+         font-size: 16px;
+         justify-content: flex-start;
+      }
+      &__phone-num {
+         order: 2;
+      }
+      &__email {
+         order: 1;
+         margin-left: unset;
+      }
+      &__phone-num,
+      &__email {
+         & span {
+            margin-right: 10px;
+         }
+         & svg {
+            width: 16px;
+            height: 16px;
+         }
+      }
+      &__to-write {
+         display: flex;
+         flex-direction: column;
+      }
+      &__socials {
+         order: 2;
+         margin-bottom: unset;
+         margin-left: unset;
+      }
+      &__to-write-btn {
+         width: 136px;
+         height: 42px;
+         padding: 5px;
+         font-weight: 400;
+         margin-bottom: 10px;
+         order: 1;
+      }
+      &__track-down-polis {
+         display: none;
+      }
+      &__politics {
+         margin-bottom: 40px;
+      }
+      &__adress {
+         display: none;
+      }
+   }
+   .logo {
+      width: 58px;
+      height: 26px;
+   }
+   .header {
+      height: 55px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+      &__buttons {
+         font-size: 9px;
+      }
+      &__login {
+         width: 47px;
+         height: 26px;
+         margin-right: 10px;
+      }
+      &__track-down {
+         width: 82px;
+         height: 26px;
+      }
+   }
+}
+// MAX-WIDTH 576.98PX breakpoints END
