@@ -41,10 +41,27 @@ function images() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(dest('app/js'))
+    .pipe(browserSync.stream())
+}
+function jquery() {
+  return src([
+    'node_modules/jquery/dist/jquery.js'
+  ])
+    .pipe(concat('jquery.js'))
+    .pipe(uglify())
+    .pipe(dest('app/js'))
+    .pipe(browserSync.stream())
+}
+function mask() {
+  return src([
+    'node_modules/jquery.maskedinput/src/jquery.maskedinput.js'
+  ])
+    .pipe(concat('jquery.maskedinput.js'))
     .pipe(uglify())
     .pipe(dest('app/js'))
     .pipe(browserSync.stream())
@@ -54,6 +71,17 @@ function styles() {
   return src('app/scss/style.scss')
     .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(concat('style.min.css'))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 version'],
+      grid: true
+    }))
+    .pipe(dest('app/css'))
+    .pipe(browserSync.stream())
+}
+function stylesSecond() {
+  return src('app/scss/style.scss')
+    .pipe(scss({ outputStyle: 'expanded' }))
+    .pipe(concat('style.css'))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 version'],
       grid: true
@@ -79,13 +107,16 @@ function watching() {
 }
 
 exports.styles = styles;
+exports.stylesSecond = stylesSecond;
 exports.watching = watching;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.jquery = jquery;
+exports.mask = mask;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, stylesSecond, scripts, browsersync, jquery, mask, watching);
 
 
