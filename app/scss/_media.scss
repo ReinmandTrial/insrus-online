@@ -82,6 +82,63 @@
 
 // MAX-WIDTH 767.98PX breakpoints START
 @media (max-width: 767.98px) {
+   .login {
+      padding: 80px 0;
+      &__content {
+         padding: 25px 35px;
+      }
+      &__title {
+         font-size: 25px;
+         margin-bottom: 25px;
+      }
+      &__tabs {
+         margin-bottom: 35px;
+         justify-content: space-evenly;
+      }
+      &__tab-item {
+         height: 41px;
+         font-size: 14px;
+         padding-left: 1.5px;
+         max-width: 150px;
+         .tab-icon {
+            width: 33px;
+            height: 33px;
+            margin-right: 8px;
+         }
+      }
+      &__divide-or {
+         display: block;
+      }
+   }
+   .input-secondary {
+      padding: 10px 10px 7px 0;
+      font-size: 16px;
+
+      &__title {
+         font-size: 18px;
+      }
+   }
+   .tab-phone-num {
+      &__head-title {
+         display: none;
+      }
+      &__head-title-mobile {
+         display: block;
+      }
+      &__num-btn,
+      &__sms-btn,
+      .tab-login__btn {
+         margin: 35px auto 0 auto;
+      }
+   }
+   .tab-login {
+      &__head-title {
+         display: none;
+      }
+      &__head-title-mobile {
+         display: block;
+      }
+   }
    .polis-info {
       // flex-direction: column;
       flex-wrap: wrap;
@@ -297,3 +354,9 @@
    }
 }
 // MAX-WIDTH 576.98PX breakpoints END
+
+@media (max-width: 374.98px) {
+   .login__content {
+      padding: 15px 10px;
+   }
+}

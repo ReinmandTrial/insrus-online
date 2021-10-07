@@ -65,7 +65,6 @@
    }
 
    &.success {
-
       .policy-num__message-basic,
       .policy-num__message-wrong {
          display: none;
@@ -89,7 +88,6 @@
    }
 
    &.wrong {
-
       .policy-num__message-basic,
       .policy-num__message-success {
          display: none;
@@ -110,7 +108,8 @@
       width: 100%;
    }
 
-   &__btns-primary {}
+   &__btns-primary {
+   }
 
    &__btn {
       &:not(:last-child) {
@@ -118,16 +117,19 @@
       }
    }
 
-   &__btn-track {}
+   &__btn-track {
+   }
 
    &__btns-secondary {
       display: flex;
       display: none;
    }
 
-   &__btn-details {}
+   &__btn-details {
+   }
 
-   &__btn-search {}
+   &__btn-search {
+   }
 
    &__message {
       width: 100%;
@@ -137,7 +139,8 @@
       // display: none;
    }
 
-   &__message-basic {}
+   &__message-basic {
+   }
 
    &__message-success {
       display: none;
@@ -197,7 +200,7 @@
 .detailed-info {
    display: none;
    padding-bottom: 100px;
-   &.open{
+   &.open {
       display: block;
    }
    &__container {
@@ -218,12 +221,13 @@
       }
    }
 
-   &__btn {}
+   &__btn {
+   }
 }
 
 .polis-info {
    display: none;
-   &.open{
+   &.open {
       display: flex;
    }
    padding-bottom: 150px;
@@ -271,7 +275,8 @@
       cursor: default;
    }
 
-   &__download {}
+   &__download {
+   }
 
    &__download-title {
       font-weight: 600;
@@ -279,5 +284,156 @@
       cursor: default;
    }
 
-   &__btn-download {}
+   &__btn-download {
+   }
+}
+.login {
+   min-height: 850px;
+   font-family: "Source Sans Pro";
+   overflow: hidden;
+   padding: 150px 0 190px;
+   // display: flex;
+   // justify-content: center;
+   &__content {
+      margin: 0 auto;
+      padding: 35px 60px;
+      // width: 635px;
+      width: 100%;
+      // flex: 0 1 635px;
+      max-width: 635px;
+      background: #ffffff;
+      border: 2.25177px solid rgba(21, 73, 159, 0.1);
+      box-sizing: border-box;
+      box-shadow: 0px 0px 56.2943px rgba(197, 195, 195, 0.25);
+      border-radius: 15.7624px;
+   }
+
+   &__title {
+      width: 100%;
+      font-weight: bold;
+      font-size: 31px;
+      text-align: center;
+      cursor: default;
+      margin-bottom: 30px;
+   }
+
+   &__tabs {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 41px;
+      align-items: center;
+   }
+   &__divide-or {
+      font-size: 16px;
+      margin: 0 9px;
+      color: #000000;
+      display: none;
+   }
+   &__tab-item {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      width: 247px;
+      height: 53px;
+      background: #ffffff;
+      border: 2.25177px solid rgba(21, 73, 159, 0.1);
+      box-shadow: 0px 0px 56.2943px rgba(197, 195, 195, 0.25);
+      border-radius: 737.456px;
+      padding-left: 3px;
+      padding-right: 15px;
+      font-size: 18px;
+      font-family: "Source Sans Pro";
+      .tab-icon {
+         width: 42px;
+         height: 42px;
+         margin-right: 10px;
+         border-radius: 50%;
+         background: #f0f0f0;
+         @extend %itemCenter;
+         fill: #839dc7;
+      }
+   }
+   &__tab-item.active {
+      background: #15499f;
+      color: #ffffff;
+      border-color: #15499f;
+      .tab-icon {
+         fill: #15499f;
+         background: #ffffff;
+         box-shadow: 0px 0px 12.0138px rgba(145, 139, 139, 0.25);
+      }
+   }
+   &__tab-body {
+      display: none;
+   }
+   &__tab-body.active {
+      display: block;
+   }
+
+   &__tabs-content {
+   }
+}
+.tab-phone-num {
+   &__head {
+   }
+
+   &__head-title {
+   }
+   &__head-title-mobile {
+      display: none;
+   }
+   &__body {
+   }
+
+   &__num-block {
+      // display: none;
+   }
+
+   &__num-btn,
+   &__sms-btn {
+      margin: 40px auto 0 auto;
+   }
+
+   &__sms-block {
+      display: none;
+   }
+}
+
+.tab-login {
+   &__head {
+   }
+
+   &__head-title {
+   }
+   &__head-title-mobile {
+      display: none;
+   }
+
+   &__body {
+   }
+
+   &__btn {
+      margin: 40px auto 0 auto;
+   }
+}
+.input-secondary {
+   padding: 12px 20px 12px 0;
+   width: 100%;
+   font-size: 20px;
+   border-bottom: 1.12589px solid #15499f;
+   &:focus {
+      border-bottom: 1.12589px solid #000;
+   }
+   &::placeholder {
+      color: rgba(109, 109, 109, 0.6);
+   }
+   &__box {
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__title {
+      font-size: 20px;
+   }
 }
