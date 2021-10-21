@@ -808,24 +808,24 @@ button {
   pointer-events: none;
   position: absolute;
   z-index: -1;
-  left: 0;
-  top: -100px;
+  left: -167px;
+  top: -37px;
 }
 
 .track-down__bg-bottom-left {
   pointer-events: none;
   position: absolute;
   z-index: -1;
-  bottom: 0;
-  left: 0;
+  bottom: -30px;
+  left: -46px;
 }
 
 .track-down__bg-bottom-right {
   pointer-events: none;
   position: absolute;
   z-index: -1;
-  right: 0;
-  bottom: 0;
+  right: -245px;
+  bottom: -36px;
 }
 
 .policy-num {

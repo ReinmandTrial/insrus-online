@@ -163,9 +163,56 @@ $(document).ready(function () {
 
    // табы end
 
+   // реакция бг на движение мыши
+   function introMouseMove() {
+      const introSection = document.querySelector('.main');
+      const elements = document.querySelectorAll('.track-down__bg');
+
+
+
+
+      introSection.addEventListener('mousemove', (e) => {
+
+         elements.forEach(el => {
+            el.style.transform = `translate(${e.pageX / 100 + 'px'}, ${e.pageY / 100 + 'px'})`;
+
+            // el.style.transform = e.pageX / 50 + 'px';
+            // el.style.transform = e.pageY / 50 + 'px';
+         })
+
+      });
+
+   }
+   // реакция бг на движение мыши конец
+   introMouseMove();
+
+
+
 })
+function changeThemeColor() {
+   const themeColors = ['#F2BD00', '#00CA45', '#F44336'];
+   // const themeFavicons = ['img/favicons/yellow-fav.ico', 'img/favicons/green-fav.ico', 'img/favicons/red-fav.ico'];
+   const link = document.querySelector('link[rel*="icon"]');
+   const flReload = localStorage.getItem('is_reloaded');
+   let flNumberTheme = localStorage.getItem('number-theme');
 
+   console.log(flNumberTheme);
 
+   if (flReload) {
+      // link.href = themeFavicons[+flNumberTheme];
+      document.querySelector('html').style.setProperty('--theme-color', themeColors[+flNumberTheme]);
+      localStorage.setItem('number-theme', ++flNumberTheme);
+   }
+
+   if (flNumberTheme > themeColors.length) {
+      // link.href = 'img/favicons/blue-fav.ico';
+      localStorage.removeItem('number-theme', 0);
+      document.querySelector('html').style.setProperty('--theme-color', '#15499F');
+   }
+
+   localStorage.setItem('is_reloaded', true);
+}
+changeThemeColor();
 
 // timer
 function timer(_Seconds) {

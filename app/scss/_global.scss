@@ -134,7 +134,7 @@ textarea {
 	}
 
 	&__input {
-		border: 1px solid #0b1f35;
+		border: 1px solid var(--theme-color);
 		border-radius: 7px;
 		width: 100%;
 		height: 54px;
@@ -154,7 +154,7 @@ textarea {
 
 	&__link {
 		text-decoration-line: underline;
-		color: #15499f;
+		color: var(--theme-color);
 		&:hover {
 			text-decoration-line: unset;
 		}
