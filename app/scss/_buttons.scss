@@ -17,37 +17,11 @@
         z-index: 5;
         pointer-events: none;
     }
-    // &:not(.btn-secondary)::before {
-    //     content: "";
-    //     position: absolute;
-    //     top: -1px;
-    //     right: -1px;
-    //     // color: var(--theme-color);
-    //     width: calc(100% + 2px);
-    //     height: calc(100% + 2px);
-    //     border-radius: 4px;
-    //     transition: 0.3s ease-in-out;
-    // }
     &:hover {
-        // width: 0;
         filter: brightness(0.8);
-    }
-    &:hover {
-        // color: #000;
     }
     &:focus {
     }
-    &:active {
-        // box-shadow: 0px 0px 4px #15499f;
-        // transform: scale(0.95);
-        // transition: transform 0.1s ease-in-out;
-    }
-    // &:disabled {
-    //     cursor: default;
-    //     background: rgba(21, 73, 159, 0.2);
-    //     border: 1px solid rgba(21, 73, 159, 0.2);
-    //     color: #fff;
-    // }
     &-primary {
         &:hover {
         }
